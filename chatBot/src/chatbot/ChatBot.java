@@ -76,6 +76,7 @@ public class ChatBot extends JFrame {
 		});
 	}
             
+        @SuppressWarnings("empty-statement")
         public void response (String someText){
             
             String CB_response = "";
@@ -83,31 +84,31 @@ public class ChatBot extends JFrame {
             // intialize Array
             String A[][] = {
                 // how can I help respnse
-                {"hey", "Hi there! How can I help you today"},
-                {"hello", "Hi there! How can I help you today"},
-                {"whats up", "Hi there! How can I help you today"},
-                {"what's up", "Hi there! How can I help you today"},
-                {"hi", "Hi there! How can I help you today"},
-                {"wassup", "Hi there! How can I help you today"},
+                {"hey", "Hi there! How can I help you with java today?"},
+                {"hello", "Hi there! How can I help you with java today?"},
+                {"whats up", "Hi there! How can I help you with java today?"},
+                {"what's up", "Hi there! How can I help you with java today?"},
+                {"hi", "Hi there! How can I help you with java today?"},
+                {"wassup", "Hi there! How can I help you with java today?"},
                 
                 // I can help with java respnse
-                
+                // {"I need help with strings"
                 // I can help with gui
                 
                 // I can help with if statements
                             
             };   
-                // linear sort for java
-            for (int i = 0; i < A.length; i++) {
-                    if ((A[i][0]).toString() == someText.toString()) {
-                        // bot needs to push out response on same index as the target
-                        // System.out.println("Element found at index " + i);
-                        CB_response = A[i][1]; 
-                        break;
-                    }else{
-                        CB_response = "Im sorry, I am not able to understand your statement";
-                    }
-            }; 
+            // linear sort for java
+            for (String[] A1 : A) {
+                if (someText.equals((A1[0]))) {
+                    // bot needs to push out response on same index as the target
+                    // System.out.println("Element found at index " + i);
+                    CB_response = A1[1];
+                    break;
+                } else {
+                    CB_response = "Im sorry, I am not able to understand your statement";
+                }
+            } ; 
             
            ChatBot(CB_response);
             
