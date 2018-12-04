@@ -12,6 +12,8 @@ import javax.swing.JFrame; // for GUI
 import javax.swing.JTextArea; // For text feild/space
 import javax.swing.JTextField; // text feild at bottom
 
+import java.util.*;
+
 public class ChatBot extends JFrame {
 	private JTextArea Chatarea = new JTextArea();
 	private JTextField chatbox = new JTextField();
@@ -97,10 +99,17 @@ public class ChatBot extends JFrame {
                 
                 // I can help with if statements
                             
-            };   
+            };
+            
+            
             // linear sort for java
             for (String[] A1 : A) {
-                if (someText.equals((A1[0]))) {
+                
+                // if (someText.equals((A1[0]))) { // use a contain function
+                // if array element contains someText
+                // .contains()
+                if(A1[0].contains(someText)){
+                    
                     // bot needs to push out response on same index as the target
                     // System.out.println("Element found at index " + i);
                     CB_response = A1[1];
